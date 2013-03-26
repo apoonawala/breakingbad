@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="habits">BreakingBad</a>
+      <ul class="nav">
+        <li><%= link_to "Habits", habits_url %></li>
+      </ul>
+    </div>
+  </div>
 
 <%= yield %>
 
