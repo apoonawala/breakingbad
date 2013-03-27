@@ -1,7 +1,11 @@
 class HabitsController < ApplicationController
 
   def index
-    @habits = Habit.all
+    if user_signed_in?
+      @habits = Habit.all
+    else
+      redirect_to new_user_session_url
+    end
   end
 
   def new
