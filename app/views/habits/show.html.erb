@@ -1,3 +1,5 @@
 <h3> <%=@habit.name%></h3>
 <%= button_to "Delete", habit_url(@habit.id), method: :delete%>
 <%= button_to "Edit", edit_habit_url(@habit.id), method: :get%>
+
+<h3>Here is your recovery plan</h3>

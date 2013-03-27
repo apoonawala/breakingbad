@@ -29,6 +29,7 @@ class HabitsController < ApplicationController
 
   def show
     @habit= Habit.find_by_id(params[:id])
+    @plans = Plan.all.limit(500)
   end
 
   def edit
