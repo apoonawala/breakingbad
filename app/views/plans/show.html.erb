@@ -1,0 +1,9 @@
+<h2>Here are your plan details for <%=@plan.name%></h2>
+<h3>Plan Details:</h3>
+<ul>
+  <li><%=@plan.name%></li>
+  <li><%=@plan.start_date%></li>
+  <li><%=@plan.end_date%></li>
+</ul>
+
+ <%=button_to "Delete Plan", plan_url(@plan.id), method: :delete%>

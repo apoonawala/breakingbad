@@ -1,0 +1,35 @@
+<%= form_for(@plan) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this actor from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Start Date" %><br />
+    <%= f.date_select :start_date%>
+  </div>
+  <div class="field">
+    <%= f.label "End Date" %><br />
+    <%= f.date_select :end_date%>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :habit_id, :value =>params[:habit]%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

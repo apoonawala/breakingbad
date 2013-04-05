@@ -3,3 +3,10 @@
 <%= button_to "Edit", edit_habit_url(@habit.id), method: :get%>
 
 <h3>Here is your recovery plan</h3>
+<ul>
+<%@habit.plans.each do |plan|%>
+<li><%=link_to plan.name, plan_url(plan.id)%></li>
+<%end%>
+</ul>
+
+ <%=link_to "Create Plan", {:controller => :plans, :action => :new, :habit => @habit.id}%>
