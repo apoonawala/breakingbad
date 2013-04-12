@@ -33,3 +33,4 @@ plans.each do |plan|
   p.habit_id = plan[:habit_id]
   p.save
 end
+
